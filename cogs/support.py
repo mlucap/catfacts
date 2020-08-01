@@ -10,7 +10,7 @@ class Support(commands.Cog):
     @commands.command(aliases=['money', 'donate'])
     async def support(self, ctx):
         """Ways to support my project!"""
-        embed = discord.Embed(title='Command coming soon', description='I really appreciate the fact you are wanting to support my financially! Unfortunetely I do not have any practical ways of accepting payments of any kind so hold tight and the best way to support this project will be adding your ideas to the `>github` page or upvoting the bot on top.gg', colour=discord.Color.red())
+        embed = discord.Embed(title='Support Me!', description='If you\'d like to support me, non only financially, please just the github repository `>github` to find proper methods! If you are looking to make a financial donation you can do so by emailing me, again on the github repository.', colour=discord.Color.orange())
         await ctx.send(embed=embed)
 
 def setup(client):
