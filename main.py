@@ -11,6 +11,7 @@ client = commands.Bot(command_prefix='>')
 
 @client.event
 async def on_ready():
+    await client.change_presence(game=discord.Game(name='>catfact'))
     print(f'Bot has logged in at {datetime.datetime.now().time()}\nLatency is {round(client.latency * 1000)}ms')
 
 for filename in os.listdir('./cogs'):
