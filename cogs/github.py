@@ -10,7 +10,7 @@ class Github(commands.Cog):
     @commands.command(aliases=['git', 'support', 'issue'])
     async def github(self, ctx):
         """Report bugs directly to the owner!"""
-        embed = discord.Embed(title='Github', description='The official catfacts github page.', url='https://github.com/mlucap/catfacts', colour=discord.Color.blue())
+        embed = discord.Embed(title='Github', description='The official catfacts github page. https://github.com/mlucap/catfacts', url='https://github.com/mlucap/catfacts', colour=discord.Color.blue())
         await ctx.send(embed=embed)
 
 def setup(client):
