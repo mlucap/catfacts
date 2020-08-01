@@ -8,12 +8,16 @@ class Bug(commands.Cog):
         self.client = client
 
     @commands.command()
-    async def bug(self, ctx, args):
+    @commands.cooldown(1, 10, commands.BucketType.user)
+    async def bug(self, ctx):
         """Report bugs directly to the owner!"""
-        coffii = await client.get_user_info('218795930294419456')
+        user = self.client.get_user(218795930294419456)
         embed = discord.Embed(title='Bug report!', description='Your bug report, along with your discord name, discriminator, and id were sent to the bot owner. He will look into your report and hopefully fix the issue soon!', colour=discord.Color.green())
-        await ctx.send(embed=embed)
-        await ctx.send_message(me, 'test')
+        if user is not None:
+            await user.send(f'{ctx.message.content} | User: {ctx.message.author} ID: {ctx.message.author.id}')
+            await ctx.send(embed=embed)
+        else:
+            await ctx.send('Unable to send request.')
 
 def setup(client):
     client.add_cog(Bug(client))
