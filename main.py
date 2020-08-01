@@ -4,6 +4,7 @@ import os
 import sys
 import json
 import datetime
+import asyncio
 from discord.ext import commands
 sys.dont_write_bytecode = True
 
@@ -13,7 +14,7 @@ client = commands.Bot(command_prefix='>')
 async def on_ready():
     while True:
         await client.change_presence(activity=discord.Game(name=f'>catfact | In {len(client.guilds)} servers!'))
-        time.sleep(60)
+        asyncio.sleep(60)
     print(f'Bot has logged in at {datetime.datetime.now().time()}\nLatency is {round(client.latency * 1000)}ms')
 
 for filename in os.listdir('./cogs'):
