@@ -7,11 +7,11 @@ import datetime
 from discord.ext import commands
 sys.dont_write_bytecode = True
 
-client = commands.Bot(command_prefix='>')
+client = commands.Bot(command_prefix='c>')
 
 @client.event
 async def on_ready():
-    await client.change_presence(game=discord.Game(name='>catfact'))
+    await client.change_presence(game=discord.Game(name='c>catfact'))
     print(f'Bot has logged in at {datetime.datetime.now().time()}\nLatency is {round(client.latency * 1000)}ms')
 
 for filename in os.listdir('./cogs'):
