@@ -9,6 +9,7 @@ from discord.ext import commands
 sys.dont_write_bytecode = True
 
 client = commands.Bot(command_prefix='>')
+client.remove_command('help')
 
 @client.event
 async def on_ready():
