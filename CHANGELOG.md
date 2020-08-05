@@ -10,7 +10,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 
 - Custom help command. Now returns a nice looking embed.
+- Uptime command. Allows users to check how long the bot has been online for.
 - Vote command. Returns no URL yet. Awaiting approval from top.gg.
+
+### Changed
+
+- Bot now changes status every 10 seconds from 60 (60s->10s). In the future I plan on adding other status messages, as for right now this is to update the number of guilds the bot is showing on its status.
+
 
 ### Removed
 
