@@ -11,7 +11,7 @@ class Vote(commands.Cog):
     @commands.cooldown(1, 10, commands.BucketType.user)
     async def vote(self, ctx):
         """Vote for the bot on top.gg"""
-        await ctx.send("In progress")
+        await ctx.send("This will return a link once the bot is approved on top.gg")
         
 
 def setup(client):
