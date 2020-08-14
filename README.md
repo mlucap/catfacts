@@ -1,6 +1,6 @@
 <h1 align="center">
   <br>
-  <a href="https://github.com/Redjumpman/Jumper-Cogs/"><img src="/images/cat.png" alt="Jumper Cogs" width="200"></a>
+  <a href="#"><img src="/images/cat.png" alt="Catfacts" width="200"></a>
   <br>
   CatFacts Discord Bot
   <br>
@@ -27,6 +27,7 @@ A discord bot that sends a random cat facts everytime you run the command. A rea
 | Commands | Description                                                                      |
 |----------|----------------------------------------------------------------------------------|
 | >help    | Shows all commands and aliases for those commands with some helpful tips         |
+| >changeprefix | Allows server admins to change the prefix for the server.                   |
 | >catfact | The main command. Provides you with a random cat fact                            |
 | >bug     | If you encounter a bug anywhere, this will report it directly to me              |
 | >github  | This sends the github repo link                                                  |
