@@ -5,6 +5,19 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.2.0] - Custom prefixes - 2020-08-14
+
+### Added
+
+- Custom prefixes. Allows server admins to change the prefix to their liking. Tagging the bot will display it's current prefix
+- Prefixes.json file to store prefixs. May change this to some sort of database in the near future, this file works for the time being
+- New presence statuses.
+
+### Changed
+
+- Updated help command embed
+
+
 ## [1.1.1] - Custom Help Command! - 2020-08-02
 
 ### Added
@@ -57,3 +70,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [1.0.0]: https://github.com/mlucap/catfacts
 [1.1.0]: https://github.com/mlucap/catfacts/blob/master/cogs/
 [1.1.1]: https://github.com/mlucap/catfacts/blob/master/cogs/help.py
+[1.2.0]: https://github.com/mlucap/catfacts/blob/master/cogs/prefix.py

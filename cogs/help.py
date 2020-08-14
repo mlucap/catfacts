@@ -16,6 +16,8 @@ class Help(commands.Cog):
         embed.add_field(name="Support", value="Provides you with different ways to support the project.")
         embed.add_field(name="Github", value="Provides you with the official github repository of this bot.")
         embed.add_field(name="Vote", value="DM's you the url to vote for the bot on top.gg. This is a great way to support the bot!")
+        embed.add_field(name="Uptime", value="Shows how long the bot has been running since it's last restart.")
+        embed.set_footer(text="The default prefix is 'cf>'. If you are ever unsure of the prefix, tagging the bot will tell you the current prefix")
         await ctx.send(embed=embed)
 def setup(client):
     client.add_cog(Help(client))
