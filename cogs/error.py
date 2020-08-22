@@ -14,6 +14,7 @@ class Error(commands.Cog):
             embed = discord.Embed(title='Command on cooldown', description='Command is on cooldown, please wait {}s'.format(math.ceil(error.retry_after)), colour=discord.Color.red())
             await ctx.send(embed=embed)
             return
-            
+
+
 def setup(client):
     client.add_cog(Error(client))

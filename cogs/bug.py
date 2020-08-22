@@ -1,6 +1,5 @@
 import discord
 from discord.ext import commands
-from discord.ext.commands import Cog, Context, errors
 
 
 class Bug(commands.Cog):
@@ -18,6 +17,7 @@ class Bug(commands.Cog):
             await ctx.send(embed=embed)
         else:
             await ctx.send('Unable to send request.')
+
 
 def setup(client):
     client.add_cog(Bug(client))

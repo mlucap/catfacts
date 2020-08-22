@@ -1,10 +1,7 @@
+import logging
+import aiohttp
 import discord
 from discord.ext import commands
-import requests
-import aiohttp
-import asyncio
-import logging
-from discord.ext.commands import Cog, Context, errors
 
 
 class Cat(commands.Cog):
@@ -12,9 +9,6 @@ class Cat(commands.Cog):
         self.client = client
 
     logging.getLogger('asyncio').setLevel(logging.CRITICAL)
-    # def cog_unload(self) -> None:
-    #     if self.__session:
-    #         asyncio.get_event_loop().create_task(self.__session.close())
 
     @commands.command(aliases=['cf', 'cat'])
     async def catfact(self, ctx: commands.Context) -> None:
@@ -28,6 +22,7 @@ class Cat(commands.Cog):
             embed = discord.Embed(title=f'Random cat fact number: **{length}**', description=f'{fact}', colour=0x400080)
             # await ctx.send(f'Random cat fact number {length}:\n{fact}')
             await ctx.send(embed=embed)
+
 
 def setup(client):
     client.add_cog(Cat(client))

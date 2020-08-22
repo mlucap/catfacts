@@ -1,6 +1,5 @@
 import discord
 from discord.ext import commands
-from discord.ext.commands import Cog, Context, errors
 
 
 class Help(commands.Cog):
@@ -20,5 +19,7 @@ class Help(commands.Cog):
         embed.add_field(name="Uptime", value="Shows how long the bot has been running since it's last restart.")
         embed.set_footer(text="The default prefix is 'cf>'. If you are ever unsure of the prefix, tagging the bot will tell you the current prefix")
         await ctx.send(embed=embed)
+
+
 def setup(client):
     client.add_cog(Help(client))

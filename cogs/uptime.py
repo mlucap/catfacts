@@ -1,8 +1,8 @@
+import datetime
+import time
+
 import discord
 from discord.ext import commands
-from discord.ext.commands import Cog, Context, errors
-import time, datetime
-
 
 start_time = time.time()
 
@@ -21,6 +21,7 @@ class Uptime(commands.Cog):
             await ctx.send(embed=embed)
         except discord.HTTPException:
             await ctx.send("Current uptime: " + text)
+
 
 def setup(client):
     client.add_cog(Uptime(client))
