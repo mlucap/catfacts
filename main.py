@@ -43,7 +43,6 @@ async def on_message(message):
     for x in message.mentions:
         if(x==client.user):
             msg = await message.channel.send(f'My prefix is `{prefix}`')
-            await msg.add_reaction('👀')
 
     await client.process_commands(message)    
 
