@@ -9,7 +9,7 @@ from discord.ext import commands
 sys.dont_write_bytecode = True
 
 
-def get_prefix(message):
+def get_prefix(self, message):
     with open('prefixes.json', 'r') as f:
         prefixes = json.load(f)
 
