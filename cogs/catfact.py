@@ -20,7 +20,7 @@ class Cat(commands.Cog):
             fact = (await response.json())["fact"]
             length = (await response.json())["length"]
             embed = discord.Embed(title=f'Random cat fact number: **{length}**', description=f'{fact}', colour=0x400080)
-            embed.set_footer(text="Be sure to join the official support server: https://discord.gg/hgxFmr9")
+            embed.set_footer(text="Catfacts will be stopping operation by the end of this month. Join the discord to stay updated with its return!: https://discord.gg/hgxFmr9")
             # await ctx.send(f'Random cat fact number {length}:\n{fact}')
             await ctx.send(embed=embed)
 
