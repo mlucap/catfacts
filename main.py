@@ -22,13 +22,13 @@ client.remove_command('help')
 @client.event
 async def on_ready():
     print(f'Bot has logged in at {datetime.datetime.now().time()}\nLatency is {round(client.latency * 1000)}ms')
-    while True:
-        await client.change_presence(activity=discord.Game(name=f'200+ Random Cat Facts!'))
-        await asyncio.sleep(10)
-        await client.change_presence(activity=discord.Game(name=f'Running in {len(client.guilds)} servers!'))
-        await asyncio.sleep(10)
-        await client.change_presence(activity=discord.Game(name=f'Mention me if you need help!'))
-        await asyncio.sleep(20)
+    #while True:
+        #await client.change_presence(activity=discord.Game(name=f'200+ Random Cat Facts!'))
+        #await asyncio.sleep(10)
+    await client.change_presence(activity=discord.Game(name=f'Running in {len(client.guilds)} servers!'))
+        #await asyncio.sleep(10)
+        #await client.change_presence(activity=discord.Game(name=f'Mention me if you need help!'))
+        #await asyncio.sleep(20)
 
 
 @client.event
